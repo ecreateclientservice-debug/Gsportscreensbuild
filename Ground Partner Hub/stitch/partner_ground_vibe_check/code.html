@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#D4AF37",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#062c21", // Deep Satin Emerald
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Public Sans', sans-serif; }
+        .emerald-gradient {
+            background: radial-gradient(circle at top left, #0a3d2e, #062c21);
+        }
+        .gold-rim {
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.05);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Top Navigation Bar -->
+<header class="flex items-center justify-between px-6 py-4 bg-background-dark/80 backdrop-blur-md border-b border-primary/20 sticky top-0 z-50">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">sports_soccer</span>
+<h1 class="text-xl font-bold tracking-tight text-slate-100">G Sports <span class="text-primary">Universe</span></h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="relative p-2 rounded-full hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-slate-100">notifications</span>
+<span class="absolute top-2 right-2 flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+</button>
+<div class="h-10 w-10 rounded-full border border-primary/40 bg-center bg-cover" data-alt="Headshot of a male sports manager" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAFxgG1Qz9DfSHO8KUkQelvWbQie78DSwi3L2dnmsewzFdhHNA9URoeu3MWi2ZCok3YjdRJtI4iFVpi0Yj6HO3F-UpRuTguQnB2A55hhAm1LixGZKW9JdqvT9ky2ubsna15BMMROyLjylgXl2tBh-sLNLmC4lDDgvW1EZ1WVSAZHoRL0GxhbmYYLTQQ7ltZrXUeNKIAHKVuxFcW-WiTSL_Xa2Wrs6hkB11RyzFChTzSAW1dB7OFynD4qg9NaMBZNmpbgaSvHTtxv2s')"></div>
+</div>
+</header>
+<main class="flex-1 max-w-5xl mx-auto w-full p-4 space-y-6">
+<!-- Dashboard Title -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 pt-4">
+<div>
+<h2 class="text-3xl font-bold text-slate-100">Partner Ground Vibe Check</h2>
+<p class="text-slate-400 mt-1 flex items-center gap-2">
+<span class="relative flex h-2 w-2">
+<span class="absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+</span>
+                    Live Dashboard: East Side Arena
+                </p>
+</div>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-primary/10 border border-primary/30 rounded-full text-primary text-xs font-semibold uppercase tracking-wider">Operational</span>
+</div>
+</div>
+<!-- Metrics Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<!-- Vibe Check Card -->
+<div class="gold-rim bg-white/5 p-6 rounded-xl flex flex-col gap-3 group hover:bg-white/10 transition-all duration-300">
+<div class="flex items-center justify-between">
+<p class="text-slate-400 text-sm font-medium">Vibe Check</p>
+<span class="material-symbols-outlined text-primary/60">water_drop</span>
+</div>
+<div>
+<p class="text-slate-100 text-2xl font-bold">Wet/Water-logged</p>
+<p class="text-red-400 text-sm font-medium mt-1">-15% Performance</p>
+</div>
+<div class="w-full bg-white/10 h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-primary h-full w-3/4"></div>
+</div>
+</div>
+<!-- Active Session Card -->
+<div class="gold-rim bg-white/5 p-6 rounded-xl flex flex-col gap-3 group hover:bg-white/10 transition-all duration-300">
+<div class="flex items-center justify-between">
+<p class="text-slate-400 text-sm font-medium">Active Session</p>
+<span class="material-symbols-outlined text-primary/60">groups</span>
+</div>
+<div>
+<p class="text-slate-100 text-2xl font-bold">Boys Football</p>
+<div class="flex items-center gap-2 mt-1">
+<span class="h-2 w-2 bg-emerald-500 rounded-full"></span>
+<p class="text-emerald-400 text-sm font-medium italic">Live Now</p>
+</div>
+</div>
+<p class="text-slate-500 text-xs mt-2 uppercase tracking-tighter">Ends in 42 mins</p>
+</div>
+<!-- Staff Card -->
+<div class="gold-rim bg-white/5 p-6 rounded-xl flex flex-col gap-3 group hover:bg-white/10 transition-all duration-300">
+<div class="flex items-center justify-between">
+<p class="text-slate-400 text-sm font-medium">On-ground Staff</p>
+<span class="material-symbols-outlined text-primary/60">verified_user</span>
+</div>
+<div>
+<p class="text-slate-100 text-2xl font-bold">4 Verified IDs</p>
+<p class="text-emerald-400 text-sm font-medium mt-1">+100% Compliance</p>
+</div>
+<div class="flex -space-x-2 mt-3">
+<div class="size-7 rounded-full border border-background-dark bg-slate-400" data-alt="Staff profile photo 1" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCdu5-mg2wzMUBbL3VF8LlE0w0qaB6VUeQTT3xMoFmHHye_OgbkPRYCbGzTDRtI0Y8g-ETsd6AFcCbSgr7GrJKEVoilYJVvjS6ubFQ_JdGsJujR9Gh0f5s3HyYZDFu2QgpEfVUlhpWCws0W4FVqNAjF6UdGAuevoYmRuEU9o3q5LlL9ixX8VW2HLAfgFcGaHw-XRgFztdPuxHDNELSXevVsOpR9t_nrY-cEncRFyVbmcvSva-Nvmi1RjubPuD1XUCJryoPEpc1hd-w')"></div>
+<div class="size-7 rounded-full border border-background-dark bg-slate-400" data-alt="Staff profile photo 2" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAnI2q1qy3L46DV82VMFydQnYFEKnONo5XXUlWf0Zo3FNF5Q0aV2M0dPZVgq6W7eB0EMq8o5qMHwZjUCWBUG-Datl5_Gc2YgJFtifC1no-xCnGktf9_F-ed773OKEIh4WD1x5jsA1GfYwwF21K9dYHvcQMAoCvupDRj7WTClXf_jsjA2nFzjoyHTH93fSzGn3qzsRUF1HE3_iI9QzUm2-bsSsim4YAvICNLxArxwfYPn2OeluoFrRlIclK1RTg_jvYzUxt99FNdS0g')"></div>
+<div class="size-7 rounded-full border border-background-dark bg-slate-400" data-alt="Staff profile photo 3" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBf43VW_BG-Jg6-ml_AQFJ7jS0PjLajSLobDAi0LKCTrAEwtyCDa6RexN_AOWlDkYyb6on_hmycMe7a8q8Wb50Tzr9HYwfyOFY5ii4RFvXNUG4wWdhxVNUzP9H0gBYtIa1u6TKQNaIl-5Uyi-p5HFNkJVeEPyaE6lueSVxJY4VckORevbSC1LKAUSQ5PWxhzEmQ_UNOlGwMWq01AQO9L0NKk24C7l5Gzj4FWFbJL0Z8JnjZ62ynorG8yWXMwzCq-PY8TAXyenRnsqM')"></div>
+<div class="size-7 rounded-full border border-background-dark bg-slate-400 flex items-center justify-center bg-primary text-[10px] text-background-dark font-bold">+1</div>
+</div>
+</div>
+</div>
+<!-- Live Feed Section -->
+<div class="gold-rim bg-white/5 rounded-xl overflow-hidden">
+<div class="p-4 border-b border-primary/10 flex justify-between items-center">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">videocam</span>
+<span class="font-semibold text-slate-100 tracking-wide uppercase text-sm">Live Feed: Pitch 1</span>
+</div>
+<span class="text-xs text-slate-400 uppercase">Arena Main Area</span>
+</div>
+<div class="relative group">
+<div class="aspect-video w-full bg-slate-800 bg-center bg-cover flex items-center justify-center" data-alt="Aerial view of a professional football pitch under stadium lights" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuChYLcAhuQ5KD15IOWbFT4jRhIlCgX9wr_IV71jK81GakLYBMQH6ElZwHqjwxD_ZsNcFZ1ZkwLNb0piAUfCmhcBCnVwbEuRTUtyBvOS7ZegZIzjS4Sw3T2QPeujUYYbvp5eCXPqN3HaqUvFxep9DHiANbXfMd5Hq-TrGAuv06JgmcRSZEI8Ysb-LlzC3SqTJeYDkVoy9qo3__5PF7mk2dCY2XIqCLuOJFuT08P6TU6E7yxmahEGjbgR99nnL0Xpd9mPb1KkUuHSZZY')">
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-all"></div>
+<button class="z-10 bg-primary/90 text-background-dark size-16 rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-xl">
+<span class="material-symbols-outlined text-4xl fill-1">play_arrow</span>
+</button>
+<!-- HUD Overlay -->
+<div class="absolute top-4 right-4 flex flex-col gap-2 items-end">
+<div class="bg-black/60 backdrop-blur px-2 py-1 rounded text-[10px] font-mono text-slate-200">CAM_01_NORTH</div>
+<div class="bg-red-600 px-2 py-0.5 rounded text-[10px] font-bold text-white flex items-center gap-1">
+<span class="h-1.5 w-1.5 bg-white rounded-full animate-pulse"></span> REC
+                        </div>
+</div>
+</div>
+</div>
+<div class="p-4 flex flex-col sm:flex-row justify-between items-center gap-4 bg-white/5">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-red-400 mt-1">warning</span>
+<div>
+<p class="text-slate-100 font-medium leading-none">Drainage Status: <span class="text-primary italic">Critical</span></p>
+<p class="text-slate-400 text-sm mt-1">Surface: Water-logged - Automatic drainage systems active</p>
+</div>
+</div>
+<button class="w-full sm:w-auto px-6 py-2.5 bg-primary text-background-dark font-bold rounded-lg hover:bg-white transition-colors text-sm uppercase tracking-wider">
+                    Manage Drainage
+                </button>
+</div>
+</div>
+<!-- Additional Grid for Info -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="gold-rim bg-white/5 p-4 rounded-xl">
+<h3 class="text-slate-100 font-bold mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm">schedule</span>
+                    Upcoming Sessions
+                </h3>
+<div class="space-y-3">
+<div class="flex items-center justify-between p-3 rounded-lg bg-white/5 border border-white/5">
+<div class="flex gap-3 items-center">
+<div class="text-xs text-center leading-tight">
+<p class="text-primary font-bold">18:00</p>
+<p class="text-slate-500">PM</p>
+</div>
+<div>
+<p class="text-sm font-medium text-slate-200">Elite Training U16</p>
+<p class="text-[10px] text-slate-500 uppercase">Pitch 2 • Coach Rahul</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-600">chevron_right</span>
+</div>
+<div class="flex items-center justify-between p-3 rounded-lg bg-white/5 border border-white/5">
+<div class="flex gap-3 items-center">
+<div class="text-xs text-center leading-tight">
+<p class="text-primary font-bold">19:30</p>
+<p class="text-slate-500">PM</p>
+</div>
+<div>
+<p class="text-sm font-medium text-slate-200">Corporate League 7s</p>
+<p class="text-[10px] text-slate-500 uppercase">Pitch 1 • Internal Staff</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-600">chevron_right</span>
+</div>
+</div>
+</div>
+<div class="gold-rim bg-white/5 p-4 rounded-xl">
+<h3 class="text-slate-100 font-bold mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm">location_on</span>
+                    Ground Heatmap
+                </h3>
+<div class="h-32 w-full rounded-lg bg-slate-800 bg-cover bg-center" data-alt="Abstract heat map representing activity on a football pitch" data-location="Football Field Map" style="background-image: url('https://placeholder.pics/svg/300')">
+<div class="w-full h-full bg-primary/20 backdrop-blur-[2px] rounded-lg flex items-center justify-center">
+<span class="bg-background-dark/80 px-3 py-1 rounded-full text-xs text-primary font-medium">View Detailed Analytics</span>
+</div>
+</div>
+</div>
+</div>
+<div class="h-20 md:h-8"></div> <!-- Spacer for mobile nav -->
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 bg-background-dark/95 backdrop-blur-lg border-t border-primary/30 z-[60]">
+<div class="max-w-md mx-auto flex justify-around items-center px-4 py-3">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined fill-1">dashboard</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Dashboard</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">sports_soccer</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Sessions</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">badge</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Staff</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Settings</span>
+</a>
+</div>
+</nav>
+</body></html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>G Sports Universe Discovery Hub</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "gold": "#D4AF37",
+                        "emerald-deep": "#042f2e",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#021a1a", // Deep Satin Emerald variant
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .gold-border {
+            border: 1px solid #D4AF37;
+        }
+        .map-gradient {
+            background: radial-gradient(circle at center, #064e3b 0%, #021a1a 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="relative flex h-screen w-full flex-col overflow-hidden">
+<!-- Header / Top Bar -->
+<div class="flex items-center bg-emerald-deep dark:bg-background-dark p-4 justify-between border-b border-gold/30">
+<div class="flex size-10 shrink-0 items-center justify-center text-gold">
+<span class="material-symbols-outlined">menu</span>
+</div>
+<h2 class="text-gold text-lg font-bold leading-tight tracking-tight flex-1 text-center uppercase tracking-[0.1em]">G Sports Universe</h2>
+<div class="flex w-10 items-center justify-end">
+<button class="flex items-center justify-center rounded-full gold-border p-1">
+<span class="material-symbols-outlined text-gold">account_circle</span>
+</button>
+</div>
+</div>
+<!-- Search Area -->
+<div class="px-4 py-3 bg-emerald-deep dark:bg-background-dark">
+<label class="flex flex-col w-full h-12">
+<div class="flex w-full flex-1 items-stretch rounded-xl gold-border bg-emerald-900/40">
+<div class="text-gold flex items-center justify-center pl-4">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 border-none bg-transparent focus:ring-0 text-slate-100 placeholder:text-gold/50 px-4 text-base" placeholder="Search sports grounds, facilities..." value=""/>
+<div class="text-gold flex items-center justify-center pr-4">
+<span class="material-symbols-outlined">mic</span>
+</div>
+</div>
+</label>
+</div>
+<!-- Category Filters -->
+<div class="flex gap-3 p-3 bg-emerald-deep dark:bg-background-dark overflow-x-auto no-scrollbar">
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary px-4 shadow-lg">
+<p class="text-white text-sm font-bold">Discovery Hub</p>
+<span class="material-symbols-outlined text-white text-sm">explore</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full gold-border bg-emerald-900/60 px-4">
+<p class="text-gold text-sm font-medium">Partner Grounds</p>
+<div class="w-2 h-2 rounded-full bg-green-500"></div>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full gold-border bg-emerald-900/60 px-4">
+<p class="text-gold text-sm font-medium">Locked Grounds</p>
+<div class="w-2 h-2 rounded-full bg-slate-500"></div>
+</button>
+</div>
+<!-- Main Map View -->
+<div class="relative flex-1 bg-background-dark overflow-hidden">
+<!-- Simulated Dark Map Interface -->
+<div class="absolute inset-0 map-gradient" data-alt="Dark emerald styled topographic map background" data-location="Global Sports Complex" style="">
+<!-- Pins - Green (Partner) -->
+<div class="absolute top-1/4 left-1/3 group cursor-pointer">
+<div class="flex flex-col items-center">
+<div class="bg-green-500 p-1 rounded-full shadow-[0_0_15px_rgba(34,197,94,0.6)] gold-border">
+<span class="material-symbols-outlined text-white text-lg">sports_soccer</span>
+</div>
+<div class="bg-black/80 text-white text-[10px] px-2 py-0.5 rounded mt-1 border border-gold/30">Partner Arena A</div>
+</div>
+</div>
+<div class="absolute bottom-1/3 right-1/4 group cursor-pointer">
+<div class="flex flex-col items-center">
+<div class="bg-green-500 p-1 rounded-full shadow-[0_0_15px_rgba(34,197,94,0.6)] gold-border">
+<span class="material-symbols-outlined text-white text-lg">fitness_center</span>
+</div>
+<div class="bg-black/80 text-white text-[10px] px-2 py-0.5 rounded mt-1 border border-gold/30">Elite Partner Hub</div>
+</div>
+</div>
+<!-- Pins - Gray (Locked) -->
+<div class="absolute top-1/2 left-1/2 group cursor-pointer">
+<div class="flex flex-col items-center opacity-70">
+<div class="bg-slate-600 p-1 rounded-full gold-border">
+<span class="material-symbols-outlined text-white text-lg">lock</span>
+</div>
+<div class="bg-black/80 text-white text-[10px] px-2 py-0.5 rounded mt-1 border border-gold/30">Locked Ground #42</div>
+</div>
+</div>
+<div class="absolute top-20 right-10 group cursor-pointer">
+<div class="flex flex-col items-center opacity-70">
+<div class="bg-slate-600 p-1 rounded-full gold-border">
+<span class="material-symbols-outlined text-white text-lg">lock</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Map Controls -->
+<div class="absolute right-4 bottom-8 flex flex-col gap-3">
+<div class="flex flex-col gold-border rounded-xl bg-background-dark/80 backdrop-blur-sm overflow-hidden">
+<button class="p-3 text-gold border-b border-gold/20 hover:bg-gold/10">
+<span class="material-symbols-outlined">add</span>
+</button>
+<button class="p-3 text-gold hover:bg-gold/10">
+<span class="material-symbols-outlined">remove</span>
+</button>
+</div>
+<button class="p-3 gold-border rounded-xl bg-background-dark/80 backdrop-blur-sm text-gold shadow-lg">
+<span class="material-symbols-outlined">near_me</span>
+</button>
+</div>
+<!-- Hub Overlay Card (Brief Preview) -->
+<div class="absolute bottom-6 left-4 right-20">
+<div class="gold-border bg-emerald-deep/90 backdrop-blur-md rounded-xl p-3 flex gap-4 items-center shadow-2xl">
+<div class="w-16 h-16 rounded-lg bg-slate-800 shrink-0 gold-border overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Aerial view of a vibrant green football pitch" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTkx8TopPa3imiuujFLtgGt68toSvdAHrwxRhABKzYq2Tk0gC_SiIey0YxyeZG2U1bRJWmt-FhkO54IX7xko7xzm5go2dTN448-oStM5-yQPrBBIdlZ-f-Rtkg5wOmXsUxwlfgZf_lDpbvdOjxTuacBHY5AXT5EUS1wstr3yhkgLvSnlZ9qpEEeT5vHrz5GgP1pFwfnDShOw8AlAiKtOK0emwwIty4UP42y1OR6qnwAH_IHIGSxysYaBfGfYH3C1XhPxw3iPmreRc"/>
+</div>
+<div class="flex-1">
+<h4 class="text-gold font-bold text-sm">Central Discovery Park</h4>
+<p class="text-slate-300 text-xs">Open for tournaments • 1.2km away</p>
+<div class="flex mt-1 gap-1">
+<span class="material-symbols-outlined text-gold text-xs">star</span>
+<span class="text-gold text-[10px] font-bold">4.8</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Navigation Bar -->
+<div class="flex gap-1 border-t border-gold/30 bg-background-dark px-2 pb-6 pt-3 shadow-[0_-4px_20px_rgba(0,0,0,0.5)]">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined text-2xl font-fill">explore</span>
+<p class="text-[10px] font-bold uppercase tracking-wider">Discovery</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-gold/60 hover:text-gold" href="#">
+<span class="material-symbols-outlined text-2xl">shield</span>
+<p class="text-[10px] font-medium uppercase tracking-wider">Guardian</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-gold/60 hover:text-gold" href="#">
+<span class="material-symbols-outlined text-2xl">castle</span>
+<p class="text-[10px] font-medium uppercase tracking-wider">Heritage</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-gold/60 hover:text-gold" href="#">
+<span class="material-symbols-outlined text-2xl">account_balance</span>
+<p class="text-[10px] font-medium uppercase tracking-wider">Institutional</p>
+</a>
+</div>
+</div>
+</body></html>
