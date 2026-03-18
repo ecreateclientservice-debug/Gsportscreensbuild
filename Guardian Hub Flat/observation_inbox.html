@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Observation Inbox | Guardian Hub</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#D4AF37",
+                        "emerald-satin": "#042f2e",
+                        "blue-neon": "#00f3ff",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#042f2e",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: "Public Sans", sans-serif;
+        }
+        .gold-outline {
+            border: 1px solid #D4AF37;
+        }
+        .neon-glow-blue {
+            box-shadow: 0 0 10px rgba(0, 243, 255, 0.3);
+        }
+        .satin-gradient {
+            background: linear-gradient(135deg, #042f2e 0%, #064e3b 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="relative flex h-auto min-h-screen w-full flex-col satin-gradient overflow-x-hidden">
+<!-- Header -->
+<div class="flex items-center p-4 pb-2 justify-between border-b border-primary/20">
+<div class="text-primary flex size-12 shrink-0 items-center justify-center">
+<span class="material-symbols-outlined">menu</span>
+</div>
+<div class="flex flex-col items-center">
+<h1 class="text-primary text-xs font-bold tracking-widest uppercase">Guardian Hub</h1>
+<h2 class="text-slate-100 text-lg font-bold leading-tight tracking-[-0.015em]">Observation Inbox</h2>
+</div>
+<div class="flex w-12 items-center justify-end">
+<button class="flex items-center justify-center rounded-full size-10 gold-outline bg-primary/10 text-primary">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</div>
+</div>
+<!-- Tabs -->
+<div class="pb-3">
+<div class="flex border-b border-primary/20 px-4 gap-8">
+<a class="flex flex-col items-center justify-center border-b-[3px] border-primary text-primary pb-[13px] pt-4" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">All Alerts</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-transparent text-slate-400 pb-[13px] pt-4" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Talent</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-transparent text-slate-400 pb-[13px] pt-4" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Activity</p>
+</a>
+</div>
+</div>
+<!-- Search -->
+<div class="px-4 py-3">
+<label class="flex flex-col min-w-40 h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-xl h-full gold-outline bg-emerald-950/50">
+<div class="text-primary flex items-center justify-center pl-4">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 border-none bg-transparent focus:ring-0 text-slate-100 placeholder:text-slate-500 text-base font-normal px-4" placeholder="Search observations..."/>
+</div>
+</label>
+</div>
+<!-- Alert Feed -->
+<div class="flex flex-col gap-4 px-4 pb-24">
+<h3 class="text-primary/80 text-xs font-bold uppercase tracking-widest pt-4">Recent Activity</h3>
+<!-- Talent Alert (Blue Neon) -->
+<div class="flex flex-col gap-3 rounded-xl p-4 bg-emerald-900/40 gold-outline neon-glow-blue">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-blue-neon">stars</span>
+<span class="text-blue-neon text-xs font-bold uppercase tracking-tighter">Talent Recognition</span>
+</div>
+<span class="text-slate-400 text-[10px]">2m ago</span>
+</div>
+<div class="flex gap-4">
+<div class="size-12 rounded-full overflow-hidden gold-outline shrink-0">
+<img class="w-full h-full object-cover" data-alt="Profile of a professional sports coach" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSvVDETKbMVemY_7xr_xjfxvvy5szRoeyEBikRe07C2JAixUeygrE05ToJ4L8YTmC4rSorN6nNagUbpybI7pr8jRZVOcWLpu1_-9kyh9JEHy_pcHc5HOQ5Px4Okd9dF_VKs41x3WCp_sQD0LV4QNvU6PlAaQH9ROb12Nm42KUSbKByYn-OmkwBbBrRp3hbn4kk_O1EZ1hfvWdDc1nQ_a2hZGxfYGArAHpcQzD9QbZCCdOiN4fdhejFwngaPIKneVdQn6C7pCnzRA8"/>
+</div>
+<div class="flex flex-col">
+<p class="text-slate-100 text-sm leading-relaxed">
+<span class="font-bold text-primary">Coach X</span> noted Talent in <span class="text-blue-neon">Session #402 (Radha)</span>. Focus and precision exceptional during drills.
+                    </p>
+<div class="mt-2 flex gap-2">
+<button class="px-3 py-1 rounded-full gold-outline bg-primary/5 text-primary text-[10px] font-bold uppercase">View Notes</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Health Alert (Subtle Gold Accent) -->
+<div class="flex flex-col gap-3 rounded-xl p-4 bg-emerald-950/60 gold-outline">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">favorite</span>
+<span class="text-primary text-xs font-bold uppercase tracking-tighter">Consistency Goal</span>
+</div>
+<span class="text-slate-400 text-[10px]">1h ago</span>
+</div>
+<div class="flex gap-4">
+<div class="size-12 rounded-full overflow-hidden gold-outline shrink-0">
+<img class="w-full h-full object-cover" data-alt="Happy grandfather in outdoor setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-LzBDcvKGSNu9hAPMYNdaMLSDDo2sp5QTA1OIk6DZKQr_XI0zDWHOrLeNj0oWeEhv4Kp9N9X9S-Wz3_a9Z-T7u3ZwS_exyR_rZVQRc7CdCkRswrMQ7yFNu8E9c62w0EdkwCfOPOqSfV8aXdHMwGiKzzf5k_zKLNaowy2UkgvnZ5XSuTWGCXC1RUYthgS3aAi39K1PaGKDJu_6z7hjUJNNoH4KUoDlaJK639UIHisfnE1SFU26KTiNnlz2wVmp8s0u5zmUSWO2Jkc"/>
+</div>
+<div class="flex flex-col">
+<p class="text-slate-100 text-sm leading-relaxed">
+<span class="font-bold text-primary">Grandfather</span> completed <span class="text-primary font-bold">45 min walk</span>. Earned Consistency Badge!
+                    </p>
+<div class="mt-2 flex gap-2">
+<div class="flex items-center gap-1 text-[10px] text-primary/80 italic">
+<span class="material-symbols-outlined text-xs">workspace_premium</span>
+                            New Badge: Consistency Master
+                        </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Talent Alert (Blue Neon) -->
+<div class="flex flex-col gap-3 rounded-xl p-4 bg-emerald-900/40 gold-outline neon-glow-blue opacity-90">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-blue-neon">psychology</span>
+<span class="text-blue-neon text-xs font-bold uppercase tracking-tighter">Mental Agility</span>
+</div>
+<span class="text-slate-400 text-[10px]">3h ago</span>
+</div>
+<div class="flex gap-4">
+<div class="size-12 rounded-full overflow-hidden gold-outline shrink-0">
+<img class="w-full h-full object-cover" data-alt="Young athlete focusing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRaG1RBFaQjtAYGe9NQhesrf-jffr9bWeOtLI_pkJ7CfDsnrjln27ne1IDFdUrx_Iy58mG7EyJVANdfr4IfZoEdXNCazwbAxWMePs3WwND-3CZ95uGv_pZiA1MWlRhIIzSMWgL2IFR1dSH_cLBMcWFIixOcbweNeQhN46xCmt8_35dgJQD3fim71cjIM8oZZsLqwCDvRZD3AWEemDwTbo4ktTlTGWWCZbA3LqdLXLyCHfhE98b18Lu0LkZdKwCW3slFt2eIbTw120"/>
+</div>
+<div class="flex flex-col">
+<p class="text-slate-100 text-sm leading-relaxed">
+<span class="font-bold text-primary">Radha</span> demonstrated high-level strategic play in team scrimmage. 
+                    </p>
+<div class="mt-2 flex gap-2">
+<button class="px-3 py-1 rounded-full gold-outline bg-primary/5 text-primary text-[10px] font-bold uppercase">Endorse Skill</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Nav Bar -->
+<div class="fixed bottom-0 w-full flex gap-2 border-t border-primary/20 bg-emerald-950 px-4 pb-6 pt-2">
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-primary" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined fill-1">home</span>
+</div>
+<p class="text-xs font-medium leading-normal tracking-[0.015em]">Home</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-400" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">social_leaderboard</span>
+</div>
+<p class="text-xs font-medium leading-normal tracking-[0.015em]">Talent</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-400" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">monitoring</span>
+</div>
+<p class="text-xs font-medium leading-normal tracking-[0.015em]">Health</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-400" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">person</span>
+</div>
+<p class="text-xs font-medium leading-normal tracking-[0.015em]">Profile</p>
+</a>
+</div>
+</div>
+</body></html>
