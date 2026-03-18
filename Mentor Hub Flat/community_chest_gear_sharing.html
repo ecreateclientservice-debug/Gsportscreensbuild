@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "gold": "#D4AF37",
+                        "emerald-deep": "#042f2e",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#022c22",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .gold-outline {
+            border: 1px solid #D4AF37;
+        }
+        .satin-bg {
+            background: radial-gradient(circle at center, #064e3b 0%, #022c22 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-emerald-deep text-slate-100">
+<div class="relative flex h-auto min-h-screen w-full flex-col satin-bg overflow-x-hidden">
+<!-- Header -->
+<div class="flex items-center p-4 pb-2 justify-between border-b border-gold/20">
+<div class="text-gold flex size-12 shrink-0 items-center justify-start">
+<span class="material-symbols-outlined">menu</span>
+</div>
+<div class="flex flex-col items-center">
+<h2 class="text-gold text-xs font-medium uppercase tracking-[0.2em]">G Sports Universe</h2>
+<h1 class="text-white text-lg font-bold leading-tight tracking-tight">Heritage Hub</h1>
+</div>
+<div class="flex w-12 items-center justify-end">
+<button class="flex items-center justify-center text-gold">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</div>
+</div>
+<!-- Title Section -->
+<div class="px-4 pt-8 pb-4 text-center">
+<h3 class="text-gold tracking-widest text-2xl font-light uppercase">Community Chest</h3>
+<p class="text-slate-300 text-sm mt-1">Premium Gear Sharing Circle</p>
+</div>
+<!-- Category Navigation -->
+<div class="pb-3 px-4">
+<div class="flex border-b border-gold/20 gap-8 justify-center">
+<a class="flex flex-col items-center justify-center border-b-2 border-gold text-gold pb-3 pt-4" href="#">
+<p class="text-sm font-bold tracking-widest uppercase">Rackets</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-transparent text-slate-400 pb-3 pt-4 hover:text-gold transition-colors" href="#">
+<p class="text-sm font-bold tracking-widest uppercase">Shoes</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-transparent text-slate-400 pb-3 pt-4 hover:text-gold transition-colors" href="#">
+<p class="text-sm font-bold tracking-widest uppercase">Apparel</p>
+</a>
+</div>
+</div>
+<!-- Grid Content -->
+<div class="flex-1 px-4 py-4">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Card 1 -->
+<div class="gold-outline rounded-xl p-4 bg-emerald-900/40 backdrop-blur-sm">
+<div class="flex justify-between items-start mb-3">
+<span class="text-[10px] font-bold uppercase tracking-widest px-2 py-1 border border-gold text-gold rounded">Hand-me-down</span>
+<span class="material-symbols-outlined text-gold/50">favorite</span>
+</div>
+<div class="aspect-square mb-4 rounded-lg overflow-hidden border border-gold/10">
+<img alt="Professional tennis racket" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity" data-alt="A professional carbon fiber tennis racket on a dark surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKJ7H0WEOt5v14Jj5hPqzBSgqqa8WIRrUPCwKXIU_kqrj4dyBpKetw9f7rK7GvsvMf4vL9cu02VDF9b7GcPudpid9C1F8-DXcarFIcE2_a9eUDljsjwqv3L3FwBl3I79o-kU7o2qk4R1CsdcWht8qHsq1uhUcpbJko07HGpCcxe6NCoyhkWHRGJUBq9Udw_jEEbgU9IGs4ho9SNIwX2GSKb2OLVWXvacrVvXLIeW0py-9QzRDwdIdX6Pbzqro91Wmx3TE8h16XYws"/>
+</div>
+<h4 class="text-white font-bold text-lg">Wilson Pro Staff 97</h4>
+<p class="text-slate-400 text-sm mb-4 italic">"Slightly used, looking for a dedicated home."</p>
+<button class="w-full py-3 bg-gold/10 border border-gold text-gold font-bold uppercase tracking-widest text-xs rounded-lg hover:bg-gold hover:text-emerald-deep transition-all">
+                        Request Item
+                    </button>
+</div>
+<!-- Card 2 -->
+<div class="gold-outline rounded-xl p-4 bg-emerald-900/40 backdrop-blur-sm">
+<div class="flex justify-between items-start mb-3">
+<span class="text-[10px] font-bold uppercase tracking-widest px-2 py-1 border border-primary text-primary rounded">Seeking</span>
+<span class="material-symbols-outlined text-gold/50">bookmark</span>
+</div>
+<div class="aspect-square mb-4 rounded-lg overflow-hidden border border-gold/10 bg-black/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-6xl text-gold/20">sports_tennis</span>
+</div>
+<h4 class="text-white font-bold text-lg">Yonex VCORE 100</h4>
+<p class="text-slate-400 text-sm mb-4">Requesting: Grip size 3, preferably 2023 model.</p>
+<button class="w-full py-3 border border-gold text-gold font-bold uppercase tracking-widest text-xs rounded-lg hover:bg-gold/5 transition-all">
+                        Offer Gear
+                    </button>
+</div>
+<!-- Card 3 -->
+<div class="gold-outline rounded-xl p-4 bg-emerald-900/40 backdrop-blur-sm">
+<div class="flex justify-between items-start mb-3">
+<span class="text-[10px] font-bold uppercase tracking-widest px-2 py-1 border border-gold text-gold rounded">Hand-me-down</span>
+<span class="material-symbols-outlined text-gold/50">verified</span>
+</div>
+<div class="aspect-square mb-4 rounded-lg overflow-hidden border border-gold/10">
+<img alt="Squash racket" class="w-full h-full object-cover opacity-80" data-alt="A high quality squash racket leaning against a wall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFdUR1vrwv3pCacrMhzSq_Y-65vaUTxB3nVZSd826Suaj9suJk88lLSoWvQNBsy7W-31qZQvshbbZ3IlscKDH2Ub4RNXFQemv_2nYF9v58GmuVAiJvlj6yCtwOW8FzrNtib_doiKDrG2nzUiJ0VNZ8Jc1mRtrtcHjZ9mKxmnhLcuSwkbT-8CRV8TCnHW0RtqXDvZHprmVFihRlQnF1iVKbEoeDKEGik3mOyMMqLWaHZ5IZEebWHAXNC63W-DDit11xHmARtID1R7A"/>
+</div>
+<h4 class="text-white font-bold text-lg">Head Graphene 360</h4>
+<p class="text-slate-400 text-sm mb-4 italic">"Perfect for beginners entering the hub."</p>
+<button class="w-full py-3 bg-gold/10 border border-gold text-gold font-bold uppercase tracking-widest text-xs rounded-lg hover:bg-gold hover:text-emerald-deep transition-all">
+                        Request Item
+                    </button>
+</div>
+</div>
+</div>
+<!-- Spacer for nav -->
+<div class="h-20"></div>
+<!-- Bottom Navigation -->
+<div class="fixed bottom-0 left-0 right-0 flex gap-2 border-t border-gold/20 bg-emerald-deep/95 backdrop-blur-md px-4 pb-6 pt-2">
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-500" href="#">
+<span class="material-symbols-outlined">home</span>
+<p class="text-[10px] font-medium uppercase tracking-wider">Home</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-gold" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">inventory_2</span>
+<p class="text-[10px] font-medium uppercase tracking-wider">Gear</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-500" href="#">
+<span class="material-symbols-outlined">calendar_month</span>
+<p class="text-[10px] font-medium uppercase tracking-wider">Events</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-500" href="#">
+<span class="material-symbols-outlined">person</span>
+<p class="text-[10px] font-medium uppercase tracking-wider">Profile</p>
+</a>
+</div>
+</div>
+</body></html>

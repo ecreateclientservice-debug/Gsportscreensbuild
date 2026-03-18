@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#D4AF37", // Metallic Gold
+                        "background-light": "#022B21", // Deep Satin Emerald
+                        "background-dark": "#011a14",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Public Sans', sans-serif;
+            background-color: #022B21;
+        }
+        .custom-toggle:checked {
+            background-color: #D4AF37;
+            border-color: #D4AF37;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light text-slate-100 font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light overflow-x-hidden">
+<!-- Header / TopAppBar -->
+<div class="flex items-center bg-background-light p-4 pb-2 justify-between border-b border-primary/20">
+<div class="text-primary flex size-12 shrink-0 items-center justify-start cursor-pointer">
+<span class="material-symbols-outlined text-3xl">arrow_back</span>
+</div>
+<h2 class="text-slate-100 text-xl font-bold leading-tight tracking-tight flex-1 text-center pr-12">
+                Facility Amenities
+            </h2>
+</div>
+<div class="max-w-2xl mx-auto w-full px-4">
+<!-- Institutional Hub Subheader -->
+<div class="py-8 text-center">
+<div class="inline-block px-4 py-1 rounded-full border border-primary/40 mb-4">
+<span class="text-primary text-xs font-semibold uppercase tracking-widest">Institutional Hub</span>
+</div>
+<h1 class="text-3xl font-bold text-slate-100">G Sports Universe</h1>
+<p class="text-slate-400 mt-2">Manage your facility features and accessibility options</p>
+</div>
+<!-- Checklist Section -->
+<div class="bg-background-dark/30 rounded-xl border border-primary/20 p-6 mb-8">
+<h3 class="text-primary text-lg font-bold leading-tight tracking-tight pb-6 border-b border-primary/10">
+                    General Access &amp; Services
+                </h3>
+<div class="mt-4 space-y-2">
+<!-- Toggle Row 1 -->
+<label class="flex items-center justify-between py-4 border-b border-primary/5 cursor-pointer group">
+<span class="text-slate-200 text-base font-medium group-hover:text-primary transition-colors">Gender-specific Washrooms</span>
+<div class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</div>
+</label>
+<!-- Toggle Row 2 -->
+<label class="flex items-center justify-between py-4 border-b border-primary/5 cursor-pointer group">
+<span class="text-slate-200 text-base font-medium group-hover:text-primary transition-colors">Stroller-friendly Paths</span>
+<div class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</div>
+</label>
+<!-- Toggle Row 3 -->
+<label class="flex items-center justify-between py-4 border-b border-primary/5 cursor-pointer group">
+<span class="text-slate-200 text-base font-medium group-hover:text-primary transition-colors">Seating Areas</span>
+<div class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</div>
+</label>
+<!-- Toggle Row 4 -->
+<label class="flex items-center justify-between py-4 border-b border-primary/5 cursor-pointer group">
+<span class="text-slate-200 text-base font-medium group-hover:text-primary transition-colors">Drinking Water</span>
+<div class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</div>
+</label>
+<!-- Toggle Row 5 -->
+<label class="flex items-center justify-between py-4 cursor-pointer group">
+<span class="text-slate-200 text-base font-medium group-hover:text-primary transition-colors">First Aid Station</span>
+<div class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</div>
+</label>
+</div>
+</div>
+<!-- Save Button Section -->
+<div class="flex flex-col gap-4 py-6">
+<button class="flex min-w-[200px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-14 px-8 bg-transparent text-primary border-2 border-primary hover:bg-primary/10 transition-all text-lg font-bold leading-normal tracking-wide">
+<span class="truncate">Save Changes</span>
+</button>
+<button class="text-slate-400 text-sm font-medium hover:text-slate-200 transition-colors mx-auto">
+                    Discard changes
+                </button>
+</div>
+</div>
+<!-- Decorative elements -->
+<div class="fixed bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
+<div class="fixed top-20 -right-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="fixed bottom-20 -left-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+</div>
+</body></html>
